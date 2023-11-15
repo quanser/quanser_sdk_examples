@@ -1,0 +1,8 @@
+CFLAGS  += -I/opt/quanser/hil_sdk/include
+LDFLAGS += -L/opt/quanser/hil_sdk/lib
+LIBS    += -lhil -lquanser_runtime -lquanser_common -lpthread -ldl -lm -lc -framework cocoa
+
+hil_read_digital_example: hil_read_digital_example.o
+	$(CC) $(LDFLAGS) $< -o $@ $(LIBS)
+
+hil_read_digital_example.o: hil_read_digital_example.c hil_read_digital_example.h

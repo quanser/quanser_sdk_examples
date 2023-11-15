@@ -1,0 +1,8 @@
+CFLAGS  += -I/opt/quanser/hil_sdk/include
+LDFLAGS += -L/opt/quanser/hil_sdk/lib
+LIBS    += -lhil -lquanser_runtime -lquanser_common -lpthread -ldl -lm -lc -framework cocoa
+
+qube_servo2_usb_write_example: qube_servo2_usb_write_example.o
+	$(CC) $(LDFLAGS) $< -o $@ $(LIBS)
+
+qube_servo2_usb_write_example.o: qube_servo2_usb_write_example.c qube_servo2_usb_write_example.h
