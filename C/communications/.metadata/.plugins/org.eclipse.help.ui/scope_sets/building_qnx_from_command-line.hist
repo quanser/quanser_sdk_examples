@@ -1,0 +1,4 @@
+#Tue Jun 07 14:47:51 EDT 2011
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=building qnx from command-line
