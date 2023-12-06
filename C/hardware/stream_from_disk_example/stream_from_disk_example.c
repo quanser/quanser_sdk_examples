@@ -92,7 +92,7 @@ read_values(FILE *file_handle, t_uint samples_to_write, t_uint num_channels, t_d
 
 int main(int argc, char* argv[])
 {
-    static const char board_type[]       = "q8";
+    static const char board_type[]       = "q8_usb";
     static const char board_identifier[] = "0";
     static char       message[512];
     static const char default_filename[] = "sample_data.txt";

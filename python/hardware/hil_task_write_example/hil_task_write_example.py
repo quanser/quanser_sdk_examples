@@ -34,7 +34,7 @@ def signal_handler(signum, frame):
 # Register a Ctrl+C handler
 signal.signal(signal.SIGINT, signal_handler)
 
-board_type = "q8"
+board_type = "q8_usb"
 board_identifier = "0"
 
 try:
