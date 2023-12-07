@@ -1,7 +1,7 @@
 @echo off
 
 rem Outputs the QUARC root folder
-call :root "%QUARC_DIR%"
+call :root "%QSDK_DIR%"
 goto :EOF
 
 :root

@@ -19,10 +19,10 @@ USEFILE=
 CCFLAGS += -fPIC
 
 #===== EXTRA_INCVPATH - a space-separated list of directories to search for include files.
-EXTRA_INCVPATH += $(QUARC_DIR)include
+EXTRA_INCVPATH += $(QSDK_DIR)include
 
 #===== EXTRA_LIBVPATH - a space-separated list of directories to search for library files.
-EXTRA_LIBVPATH += $(QUARC_DIR)lib/$(TARGET_TYPE)
+EXTRA_LIBVPATH += $(QSDK_DIR)lib/$(TARGET_TYPE)
 
 #===== LIBS - a space-separated list of library items to be included in the link.
 LIBS += quanser_communications quanser_runtime quanser_common m

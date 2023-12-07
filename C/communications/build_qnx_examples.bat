@@ -43,11 +43,11 @@ if "%operation%"=="clean"   set flags=clean
 
 rem Invoke make in each example directory
 for /d %%f in (*.*) do (
-    if exist %%f\Makefile echo Building %%f... && call :build %%f "%QUARC_DIR%"
+    if exist %%f\Makefile echo Building %%f... && call :build %%f "%QSDK_DIR%"
 )
 
 goto :EOF
 
 :build
 
-"%QNX_HOST%\usr\bin\make" -C %~ps1\%~nx1 CONFIGURATION=%configuration% PLATFORM=%platform% %variant_list% EXTRA_CCFLAGS= MAKEFLAGS=-I%QNX_TARGET%/usr/include QRDIR=%QNX_TARGET%/usr/include/ QUARC_DIR=%~s2 %flags%
+"%QNX_HOST%\usr\bin\make" -C %~ps1\%~nx1 CONFIGURATION=%configuration% PLATFORM=%platform% %variant_list% EXTRA_CCFLAGS= MAKEFLAGS=-I%QNX_TARGET%/usr/include QRDIR=%QNX_TARGET%/usr/include/ QSDK_DIR=%~s2 %flags%

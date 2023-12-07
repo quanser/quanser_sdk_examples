@@ -5,5 +5,5 @@ ifdef QCONFIG
 QRDIR=$(dir $(QCONFIG))
 endif
 endif
-QUARC_DIR := $(subst \,/,$(shell $(QUARC_DIR)examples/C/communications/quarc_root.bat))
+QSDK_DIR := $(subst \,/,$(shell $(QSDK_DIR)examples/C/communications/quarc_root.bat))
 include $(QRDIR)$(QRECURSE)
